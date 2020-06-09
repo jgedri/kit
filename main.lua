@@ -1,4 +1,5 @@
 function love.load ()
+  require('kitfox')
   anim8 = require "anim8.anim8"
   windowWidth = love.graphics.getWidth()
   windowHeight = love.graphics.getHeight()
