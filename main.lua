@@ -1,8 +1,11 @@
 function love.load ()
   require('kitfox')
+  require('coin')
   anim8 = require "anim8.anim8"
   windowWidth = love.graphics.getWidth()
   windowHeight = love.graphics.getHeight()
+
+  sti = require('sti')
 
   sprites = {}
   sprites.bar = love.graphics.newImage('sprites/bar.png')
@@ -14,7 +17,7 @@ function love.load ()
   walk = anim8.newAnimation(foxGrid('1-3',1), 0.1)
   slide = anim8.newAnimation(foxGrid('1-3',8), 0.1)
 
-  local coinGrid = anim8.newGrid(41, 42, sprites.coin:getWidth(), sprites.coin:getHeight())
+
 end
 
 function love.update(dt)
@@ -24,5 +27,8 @@ end
 function love.draw()
   love.graphics.draw(sprites.bar, 0, 0)
   love.graphics.draw(sprites.kitfox, 0, 150)
-  love.graphics.draw(sprites.coin, 10, 100)
+
+  for i,c in ipairs(t) do
+
+  end
 end
